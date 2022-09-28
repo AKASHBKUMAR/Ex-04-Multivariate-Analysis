@@ -1,160 +1,35 @@
 Ex-04-Multivariate-Analysis
-AIM: 
-To apply multivariate analysis on a give data set.
+AIM:
+To perform Multivariate EDA on the given data set.
 
-Algorithm:
+EXPLANATION:
+Exploratory data analysis is used to understand the messages within a dataset. This technique involves many iterative processes to ensure that the cleaned data is further sorted to better understand the useful meaning.The primary aim with exploratory analysis is to examine the data for distribution, outliers and anomalies to direct specific testing of your hypothesis.
 
-Step 1.start
+ALGORITHM:
+STEP 1
+Import the built libraries required to perform EDA and outlier removal.
 
-Step 2.read the dta from the file
+STEP 2
+Read the given csv file.
 
-Step 3.clean the data a)remove outliers b)fill the null value or drop the column
+STEP 3
+Convert the file into a dataframe and get information of the data.
 
-Step 4.perform multivariate analysis a)scatter plot b)box plot c)heat map
+STEP 4
+Return the objects containing counts of unique values using (value_counts()).
 
-Program: read and cleaned the null value: code: 
-import pandas as pd
+STEP 5
+Plot the counts in the form of Histogram or Bar Graph.
 
-df=pd.read_csv("/content/SuperStore.csv")
+STEP 6
+Use seaborn the bar graph comparison of data can be viewed.
 
-df['Postal Code']=df['Postal Code'].fillna(df['Postal Code'].mode()[0])
+STEP 7
+Find the pairwise correlation of all columns in the dataframe.corr() .
 
-df.isnull().sum()
+STEP 8
+Save the final data set into the file.
 
-image
-
-scatter plot:
-
-df.dtypes:
-
-code:
-
-df.dtype
-
-output:
-
-image
-
-kurtosis:
-
-df.kurtosis()
-
-code:
-
-output:
-
-image
-
-scatter plot:
-
-code:
-
-import pandas as pd
-
-import seaborn as sns
-
-sns.boxplot(df['Sales'],df['Postal Code'])
-
-output:
-
-image
-
-Bar plot:
-
-code:
-
-sns.barplot(x=df["Sales"],y=df["Postal Code"],data=df)
-
-image
-
-bar plot
-
-code:
-
-import pandas as pd
-
-import seaborn as sns
-
-import matplotlib.pyplot as plt
-
-states=df.loc[:,["Postal Code","Sales"]]
-
-states=states.groupby(by=["Postal Code"]).sum().sort_values(by="Sales")
-
-plt.figure(figsize=(17,7))
-
-sns.barplot(x=states.index,y="Sales",data=states)
-
-plt.xticks(rotation = 90)
-
-plt.xlabel=("Postal Code")
-
-plt.ylabel=("Sales")
-
-plt.show()
-
-output:
-
-image
-
-code:
-
-import pandas as pd
-
-import seaborn as sns import matplotlib.pyplot as plt
-
-states=df.loc[:,["State","Postal Code"]]
-
-states=states.groupby(by=["State"]).sum().sort_values(by="Postal Code")
-
-plt.figure(figsize=(17,7))
-
-sns.barplot(x=states.index,y="Postal Code",data=states)
-
-plt.xticks(rotation = 90)
-
-plt.xlabel=("Sales")
-
-plt.ylabel=("Postal Code")
-
-plt.show()
-
-output:
-
-image
-
-corr:
-
-df.corr()
-
-output:
-
-image
-
-Heatmap:
-
-code:
-
-import numpy as np
-
-import seaborn as sn
-
-import matplotlib.pyplot as plt
-
-data=pd.read_csv("/content/SuperStore.csv")
-
-data = np.random.randint(low = 1, high = 100, size = (10, 10))
-
-print("The data to be plotted:\n")
-
-print(data)
-
-hm = sn.heatmap(data = data)
-
-plt.show()
-
-output: image
-
-RESULT:
-
-Thus we have applied the multiivariate analysis sucessfully
+PROGRAM:
+Developed by    : Akash Kumar B
+Register number : 212221040011
