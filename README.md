@@ -1,8 +1,14 @@
-Ex-04-Multivariate-Analysis AIM To perform Multivariate EDA on the given data set.
+Ex-04-Multivariate-Analysis 
 
-EXPLANATION Exploratory data analysis is used to understand the messages within a dataset. This technique involves many iterative processes to ensure that the cleaned data is further sorted to better understand the useful meaning.The primary aim with exploratory analysis is to examine the data for distribution, outliers and anomalies to direct specific testing of your hypothesis.
+AIM 
+To perform Multivariate EDA on the given data set.
 
-ALGORITHM STEP 1 Import the built libraries required to perform EDA and outlier removal.
+EXPLANATION 
+Exploratory data analysis is used to understand the messages within a dataset. This technique involves many iterative processes to ensure that the cleaned data is further sorted to better understand the useful meaning.The primary aim with exploratory analysis is to examine the data for distribution, outliers and anomalies to direct specific testing of your hypothesis.
+
+ALGORITHM 
+
+STEP 1 Import the built libraries required to perform EDA and outlier removal.
 
 STEP 2 Read the given csv file
 
@@ -18,9 +24,14 @@ STEP 7 Find the pairwise correlation of all columns in the dataframe.corr()
 
 STEP 8 Save the final data set into the file
 
-CODE Developed by:Akash Kumar B Registration Number:212221040011
+CODE Developed by:Akash Kumar B 
+Registration Number:212221040011
 
-Multivariate EDA - SuperStore.csv import pandas as pd import numpy as np import seaborn as sbn import matplotlib.pyplot as plt
+Multivariate EDA - SuperStore.csv 
+import pandas as pd 
+import numpy as np 
+import seaborn as sbn 
+import matplotlib.pyplot as plt
 
 df = pd.read_csv("SuperStore.csv") df.head(10)
 
