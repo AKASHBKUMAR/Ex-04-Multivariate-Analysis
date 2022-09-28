@@ -1,17 +1,19 @@
 Ex-04-Multivariate-Analysis
-AIM: To apply multivariate analysis on a give data set.
+AIM: 
+To apply multivariate analysis on a give data set.
 
 Algorithm:
 
-1.start
+Step 1.start
 
-2.read the dta from the file
+Step 2.read the dta from the file
 
-3.clean the data a)remove outliers b)fill the null value or drop the column
+Step 3.clean the data a)remove outliers b)fill the null value or drop the column
 
-4.perform multivariate analysis a)scatter plot b)box plot c)heat map
+Step 4.perform multivariate analysis a)scatter plot b)box plot c)heat map
 
-Program: read and cleaned the null value: code: import pandas as pd
+Program: read and cleaned the null value: code: 
+import pandas as pd
 
 df=pd.read_csv("/content/SuperStore.csv")
 
