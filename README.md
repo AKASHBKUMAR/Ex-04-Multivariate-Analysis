@@ -45,3 +45,52 @@ Save the final data set into the file.
 PROGRAM:
 Developed by    : Akash Kumar B
 Register number : 212221040011
+
+
+import pandas as pd
+import numpy as np
+import seaborn as sbn
+import matplotlib.pyplot as plt
+
+d = pd.read_csv("D:\ggg\clg\Documents\SEM 3\Data Science\Projects\Ex-04-Multivariate-Analysis\SuperStore.csv")
+d.head()
+
+d.info()
+d.describe()
+d.isnull().sum()
+
+d['Postal Code'] = d["Postal Code"].fillna(d['Postal Code'].mode()[0])
+d.isnull().sum()
+
+sbn.scatterplot(d['Postal Code'],d['Sales'])
+
+states=d.loc[:,["State","Sales"]]
+states=states.groupby(by=["State"]).sum().sort_values(by="Sales")
+plt.figure(figsize=(17,7))
+sbn.barplot(x=states.index,y="Sales",data=states)
+plt.xticks(rotation = 90)
+plt.xlabel=("STATES")
+plt.ylabel=("SALES")
+plt.show()
+
+states=d.loc[:,["State","Postal Code"]]
+states=states.groupby(by=["State"]).sum().sort_values(by="Postal Code")
+plt.figure(figsize=(17,7))
+sbn.barplot(x=states.index,y="Postal Code",data=states)
+plt.xticks(rotation = 90)
+plt.xlabel=("STATES")
+plt.ylabel=("Postal Code")
+plt.show()
+
+states=d.loc[:,["Segment","Sales"]]
+states=states.groupby(by=["Segment"]).sum().sort_values(by="Sales")
+plt.figure(figsize=(10,7))
+sbn.barplot(x=states.index,y="Sales",data=states)
+plt.xticks(rotation = 90)
+plt.xlabel=("SEGMENT")
+plt.ylabel=("SALES")
+plt.show()
+
+sbn.barplot(d['Postal Code'],d['Ship Mode'],hue=d['Region'])
+d.corr()
+sbn.heatmap(d.corr(),annot=True)
