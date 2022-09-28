@@ -55,14 +55,26 @@ plt.xlabel=("STATES") plt.ylabel=("SALES") plt.show() states=df.loc[:,["State","
 
 Displaying information about Dataset output
 
+![](https://github.com/AKASHBKUMAR/Ex03-Univariate-Analysis/blob/main/1.JPG)
+
 Checking the null values and Cleaning it output
+
+![](https://github.com/AKASHBKUMAR/Ex03-Univariate-Analysis/blob/main/1.JPG)
 
 Displaying datatypes of each features output
 
+![](https://github.com/AKASHBKUMAR/Ex03-Univariate-Analysis/blob/main/1.JPG)
+
 Multivariate Analysis - Scatterplot output
+
+![](https://github.com/AKASHBKUMAR/Ex03-Univariate-Analysis/blob/main/1.JPG)
 
 Multivariate Analysis - Barplot output output output
 
+![](https://github.com/AKASHBKUMAR/Ex03-Univariate-Analysis/blob/main/1.JPG)
+
 Correlation Coefficient Interpretation using HeatMap output
+
+![](https://github.com/AKASHBKUMAR/Ex03-Univariate-Analysis/blob/main/1.JPG)
 
 RESULT Thus the program to perform EDA on the given data set is successfully executed.
